@@ -8,16 +8,12 @@ footer{
   z-index: 1;
   margin: -85px auto 0 ;
   text-align: center;
-  hr{
+  hr{              // h = 1px 
     max-width: 1166px;
     height: 1px;
-    background-color: #fff;
-    
+    background-color: #fff;  
     border:0 none;
   }
-
-
-
 }
 .socials{
   width: 30%;
@@ -32,10 +28,26 @@ footer{
     background-color: #ffffff;
     line-height: 30px;
     &:hover{
-      background-color: #0084b4;
       color: #ffffff;
     }
-
+    &:hover:nth-child(1){
+      background-color: #3B5998;//fb
+    }
+    &:hover:nth-child(2){
+      background-color: #1da1f2;//tw
+    }
+    &:hover:nth-child(3){
+      background-color: #db4a39;//google+
+    }
+    &:hover:nth-child(4){
+      background-color: #0077B5;//linkidin
+    }
+    &:hover:nth-child(5){
+      background-color: #053eff; //behance
+    }
+    &:hover:nth-child(6){
+      background-color: #ea4c89; //dribbble
+    }
   }
 }
 .copyright{
@@ -64,7 +76,7 @@ letter-spacing: 0.96px;
   height: 41px;
   right: 50px;
   bottom: 195px;
-  box-shadow: 0 10px 27px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 15px 1px rgba(0, 0, 0, 0.4);
   background-color: #ffffff;
   &:hover{
     box-shadow: 0 0 5px 1px  #4d4d4d;

@@ -24,27 +24,6 @@ $second-bg-color: #fff;
     padding: 0 10px; 
 
     /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {} 
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    padding: 0 10px;
-  } 
-
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    
-  } 
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    padding: 0 50px;
-  } 
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    padding: 0 100px;
-  }
 }
   button{
     font-family: 'Asap', sans-serif;
@@ -60,8 +39,10 @@ $second-bg-color: #fff;
   .btn-transparent{
     background: transparent;
     border: 1px solid #4d4d4d;
+    transition: 0.3s;
     &:hover{
       box-shadow: 0 0 0 1px #4d4d4d;
+
     }   
     
 
@@ -71,16 +52,13 @@ $second-bg-color: #fff;
     border: 1px solid #ffffff;
     box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
     border: none;
-    
+    transition: 0.3s;
     &:hover{
        background: transparent;
         border: 1px solid #4d4d4d;
         box-shadow: none;
     }
   } 
-  
-
-
 h2{
   position: relative;
   opacity: 0.8;
@@ -109,3 +87,70 @@ h2{
    }
 
  }
+
+ .burger-wraper {
+   display: block;
+   position: relative;
+   width: 30px;
+   height: 30px;
+  cursor: pointer; }
+
+
+.burger {
+  top:44%;
+  left: 3px;
+  width: 22px;
+  height: 3px;
+  position: absolute;
+  opacity: .7;
+  background-color: #4d4d4d; }
+
+.burger::before, .burger::after {
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 3px;
+  background-color: #4d4d4d;
+  content: ' '; }
+
+.burger::before {
+  bottom: 8px; }
+
+.burger::after {
+  top: 8px; }
+ @media only screen and (max-width: 600px) {
+   h2{
+      font-size: 2.2rem;
+    }
+
+ } 
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .wraper{
+      padding: 0 10px;
+    }
+    h2{
+      font-size: 2.2rem;
+    }
+    
+  } 
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    
+  } 
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .wraper{
+        padding: 0 50px;
+      }
+  } 
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .wraper{
+     padding: 0 100px;
+    }
+  } 

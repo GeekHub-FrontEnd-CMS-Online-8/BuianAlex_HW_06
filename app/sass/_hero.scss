@@ -1,31 +1,34 @@
 .hero{
   position: relative;
   padding-top: 95px;
+  padding-bottom: 2rem; 
   margin-top: -83px;
-  height: 100vh;
+  //height: 100vh;
   overflow: hidden;
   @extend %space-between;
+  align-items: flex-end;
   background-image: repeating-linear-gradient(
                       110deg, #e1e1e1 0%,  #e1e1e1 10%, #dedddd 10%, #dedddd 24%, );
   button{
     margin: 0 1rem 1rem 0;
     width: 160px;
     height: 50px;
-  }                    
+  }                  
 }
 .content-wraper{
   position: relative;
   height:auto;
   width: 600px;
-  
+   align-content: center;
 }
 .hero-content{
-  position: absolute;
   left: 0px;
   top:23%;
-  width: 100%;
+  width: 50%;
+  margin-top: 3rem;
+  align-self: flex-start;
   h1{
-    font-size: 90px;
+    
     font-weight: 500;
     margin-left: -7px;
     margin-bottom: 1.5rem;
@@ -40,8 +43,16 @@
     
   }
 }
+.img-hero{
+  width: 45%;
+  max-width: 570px;
+   img{
+          width: 100%;
+          height: auto;
+        }
+}
 .btn-down{
-  display: block;
+  display: none;
   text-align: center;
   line-height: 45px;
   position: absolute;
@@ -49,12 +60,89 @@
   width: 45px;
   height: 41px;
   left: 100px;
-  bottom: 100px;
-  box-shadow: 0 10px 27px 3px rgba(0, 0, 0, 0.2);
+  
+  box-shadow: 0 0px 15px 1px rgba(0, 0, 0, 0.4);
   background-color: #ffffff;
   color: #4d4d4d;
   &:hover{
     box-shadow: 0 0 5px 1px  #4d4d4d;
   }
-
 }
+
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hero{
+      flex-direction: column-reverse;
+      justify-content: space-around;
+  }
+  .img-hero{
+      width: 100%;  
+    }   
+  .hero-content{
+    text-align: center;     
+    width: 100%;
+      h1{
+        font-size: 3rem;
+      }
+      span{
+        font-size: 1rem;
+      }
+    }     
+  } 
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .hero-content{
+      h1{
+        font-size: 3rem;
+      }
+      span{
+        font-size: 1rem;
+      }
+    }
+  }
+   
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    
+  } 
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .btn-down{
+      display: block;
+      bottom: 50px;
+    }
+    .hero-content{
+      h1{
+        font-size: 4rem;
+      }
+      span{
+        font-size: 1.5rem;
+      }
+    }
+ 
+  } 
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .hero-content{
+      h1{
+        font-size: 4.5rem;
+      }
+      span{
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1285px) {
+    .hero-content{
+      h1{
+        font-size: 90px;
+      }
+      span{
+        font-size: 1.5rem;
+      }
+    }
+
+  }
