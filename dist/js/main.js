@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; //////slider
 
 if (document.getElementsByClassName("slider").length !== 0) {
   var currentSlide = function currentSlide(n) {
@@ -44,11 +44,16 @@ if (document.getElementsByClassName("slider").length !== 0) {
   var slideIndex = 1;
   var timer;
   showSlides(slideIndex);
-}
+} ///TO TOP button
+
 
 var buttonTop = document.getElementById("toUp");
 buttonTop.addEventListener('click', function () {
-  topFunction();
+  window.scrollTo({
+    'behavior': 'smooth',
+    'left': 0,
+    'top': 0
+  });
 });
 
 window.onscroll = function () {
@@ -61,9 +66,41 @@ function scrollFunction() {
   } else {
     buttonTop.style.display = "none";
   }
-}
+} ///anchors smooth scroll
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+
+var anchors = document.querySelectorAll('a[href*="#"]');
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+  var _loop = function _loop() {
+    var anchor = _step.value;
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      var blockID = anchor.getAttribute('href');
+      document.querySelector('' + blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  };
+
+  for (var _iterator = anchors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    _loop();
+  }
+} catch (err) {
+  _didIteratorError = true;
+  _iteratorError = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion && _iterator.return != null) {
+      _iterator.return();
+    }
+  } finally {
+    if (_didIteratorError) {
+      throw _iteratorError;
+    }
+  }
 }

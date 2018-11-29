@@ -18,8 +18,16 @@
   
   li{
     margin-bottom: 1.6rem;
+    width: 30%;
+    max-width: 370px;
     &:hover{
       box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.3);
     }
+  }
+  img{
+    width: 100%;
+    height: auto;
+    
+    height: auto;
   }
 }

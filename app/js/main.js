@@ -1,4 +1,6 @@
 "use strict";
+
+//////slider
 if (document.getElementsByClassName("slider").length!==0){
   var dots = document.getElementsByClassName("dot");
 
@@ -40,9 +42,15 @@ if (document.getElementsByClassName("slider").length!==0){
 
 }
 
+
+///TO TOP button
 let buttonTop = document.getElementById("toUp");
 buttonTop.addEventListener('click', function () {
-  topFunction();
+  window.scrollTo({
+    'behavior': 'smooth',
+    'left': 0,
+    'top': 0
+  });
 });
 
 window.onscroll = function () { scrollFunction() };
@@ -57,9 +65,20 @@ function scrollFunction() {
 }
 
 
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
+///anchors smooth scroll
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href')
+    
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
 }
 
 

@@ -64,5 +64,6 @@
 }
 .input-inline{
   @extend %space-between;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
 }

@@ -52,13 +52,7 @@
   bottom: 100px;
   box-shadow: 0 10px 27px 3px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
-  a{
-    color: #4d4d4d;
-    &:active{
-       color: #4d4d4d;
-    }
-  }
-
+  color: #4d4d4d;
   &:hover{
     box-shadow: 0 0 5px 1px  #4d4d4d;
   }

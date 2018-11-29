@@ -59,6 +59,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.about img {
+  width: 100%; }
+  @media only screen and (min-width: 600px) {
+    .about img {
+      width: 48%; } }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -66,14 +72,27 @@ a {
 body {
   font-size: 16px;
   font-family: 'Asap', sans-serif;
-  width: 100%;
   color: #4d4d4d; }
 
 .wraper {
   max-width: 1366px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 100px; }
+  padding: 0 10px;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */ }
+  @media only screen and (min-width: 600px) {
+    .wraper {
+      padding: 0 10px; } }
+  @media only screen and (min-width: 992px) {
+    .wraper {
+      padding: 0 50px; } }
+  @media only screen and (min-width: 1200px) {
+    .wraper {
+      padding: 0 100px; } }
 
 button {
   font-family: 'Asap', sans-serif;
@@ -159,6 +178,7 @@ h2::before {
       margin: 0; }
   .main-nav a {
     color: #4d4d4d;
+    font-size: 1rem;
     font-weight: 400;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent; }
@@ -216,40 +236,64 @@ h2::before {
   bottom: 100px;
   -webkit-box-shadow: 0 10px 27px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 27px 3px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff; }
-  .btn-down a {
-    color: #4d4d4d; }
-    .btn-down a:active {
-      color: #4d4d4d; }
+  background-color: #ffffff;
+  color: #4d4d4d; }
   .btn-down:hover {
     -webkit-box-shadow: 0 0 5px 1px  #4d4d4d;
             box-shadow: 0 0 5px 1px  #4d4d4d; }
 
 .about {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding-top: 6.7rem;
-  padding-bottom: 8rem; }
+  padding-bottom: 4rem; }
   .about h2 {
     max-width: 400px; }
     .about h2::before {
       left: 5px; }
   .about p {
-    max-height: 121px;
+    max-height: 125px;
+    width: 100%;
     max-width: 470px;
+    margin-bottom: 2.5rem;
+    padding-right: 10px;
     overflow: hidden;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    margin-bottom: 2.5rem; }
+    text-align: left; }
+  .about img {
+    min-width: 320px;
+    height: auto;
+    padding-bottom: 2rem; }
   .about button {
     width: 245px;
     height: 50px; }
+  @media only screen and (max-width: 923px) {
+    .about .about-content-wraper {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+    .about img {
+      width: 100%; }
+    .about h2 {
+      margin: 0 auto; }
+    .about h2::before {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    .about .about-content {
+      width: 100%; } }
 
-.about-content {
-  width: 100%; }
+.about-content-wraper {
+  max-width: 470px;
+  padding-bottom: 2rem; }
 
 .services {
   background-color: #f6f6f6;
@@ -263,6 +307,7 @@ h2::before {
 .features-item {
   position: relative;
   width: 33%;
+  min-width: 300px;
   padding-top: 90px;
   text-align: center;
   margin-bottom: 5rem; }
@@ -314,7 +359,9 @@ h2::before {
   text-align: center;
   padding-bottom: 6rem; }
   .skills img {
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 70%;
+    height: auto; }
 
 .portfolio {
   background-color: #f6f6f6;
@@ -330,10 +377,16 @@ h2::before {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
   .work-priview li {
-    margin-bottom: 1.6rem; }
+    margin-bottom: 1.6rem;
+    width: 30%;
+    max-width: 370px; }
     .work-priview li:hover {
       -webkit-box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.3);
               box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.3); }
+  .work-priview img {
+    width: 100%;
+    height: auto;
+    height: auto; }
 
 .slider {
   position: relative; }
@@ -441,9 +494,13 @@ h2::before {
 
 .facts {
   padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
   .facts li {
     width: 20%;
+    min-width: 300px;
     position: relative;
     padding-top: 130px;
     text-align: center;
@@ -594,6 +651,9 @@ h2::before {
               box-shadow: 0 0 5px 5px  #4d4d4d; }
 
 .input-inline {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin-bottom: 2rem; }
 
 footer {

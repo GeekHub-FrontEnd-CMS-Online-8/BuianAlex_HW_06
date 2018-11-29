@@ -7,10 +7,11 @@
   @extend %space-between;
   padding-top: 3rem;
   padding-bottom: 3rem; 
-
+  flex-wrap: wrap;
   
   li{
     width: 20%;
+    min-width: 300px;
     position: relative;
     padding-top: 130px;
     text-align: center;
