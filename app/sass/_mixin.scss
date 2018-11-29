@@ -1,0 +1,14 @@
+@mixin full_page_img($url) {
+  background-image: url($url);
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+%space-between {
+  display: flex;
+  justify-content: space-between; 
+}
