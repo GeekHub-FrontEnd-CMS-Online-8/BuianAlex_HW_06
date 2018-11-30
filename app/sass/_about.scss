@@ -6,6 +6,7 @@
   padding-bottom: 4rem;
   h2{
     max-width: 400px; 
+    margin-bottom: 2rem;
     &::before{
       left: 5px;
     }
@@ -42,7 +43,7 @@
       width: 100%;
     }
     h2{
-      margin: 0 auto;
+      margin: 0 auto 1rem;
     }
     h2::before{
         left: 50%;
@@ -50,6 +51,9 @@
     }
     .about-content{
       width: 100%;
+    }
+    p{
+      text-align: center;
     }
 
 
