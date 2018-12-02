@@ -4,7 +4,10 @@
 .slider-dots{
   position: absolute;
   left: 50%;
-  bottom: 2rem;
+  bottom: 1rem;
+  @media only screen and (min-width: 600px) {
+    bottom: 2rem;
+  }
   transform: translate(-50%, 0);
   z-index: 1;
   span{

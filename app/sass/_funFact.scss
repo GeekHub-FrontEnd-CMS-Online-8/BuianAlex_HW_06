@@ -1,74 +1,105 @@
 .funfact{
   background-color: $bg-color;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 
 .facts{
   @extend %space-between;
-  padding-top: 3rem;
-  padding-bottom: 3rem; 
+ 
   flex-wrap: wrap;
   
   li{
     width: 20%;
-    min-width: 300px;
     position: relative;
-    padding-top: 130px;
     text-align: center;
     color: #212121;
     
-    &:nth-child(1) .fact-icon{
-    
-        background-position: -0px -0px; width: 98px; height: 98px;
-      
-      
+    &:nth-child(1) .fact-icon{  
+        background-image: url(./../img/studyfact.svg);       
     }
     &:nth-child(2) .fact-icon{
-      background-position: -0px -98px; width: 77px; height: 77px; 
+      background-image: url(./../img/happinessfact.svg);  
     }
     &:nth-child(3) .fact-icon{
-      background-position: -0px -257px; width: 64px; height: 74px; 
+      background-image: url(./../img/delivery-completefact.svg);  
     }
-    &:nth-child(4) .fact-icon{
-   
-        background-position: -0px -175px; width: 70px; height: 82px; 
-    
-      
+    &:nth-child(4) .fact-icon{   
+        background-image: url(./../img/cupfact.svg);       
     }
-
-
   }
 }
 .fact-icon{
-   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-    background: url('./../img/funFact.png') no-repeat; 
-    overflow: hidden; 
-    text-indent: -9999px; 
-    text-align: left;
-  
-  
-
-}
-.icon-center-wraper{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); 
   width: 100px;
   height: 100px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+    overflow: hidden; 
 }
 .fact-num{
-  font-size: 30px; 
   font-weight: 700;
   line-height: 32px;
-
 }
 .fact-name{
-  font-size: 22px;
   font-weight: 400;
-  line-height: 32px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 600px) {
+  .fact-icon{
+  width: 40px;
+  height: 40px;}
+  .fact-num{
+  font-size: 1.2rem; }
+  .fact-name{
+  font-size: 0.6rem;}
+  .facts{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    li{
+      padding-top: 3rem;
+    }
+  }
+} 
+@media only screen and (min-width: 600px) {
+  .funfact{
+  margin-bottom: 4rem;
+}
+.fact-icon{
+  width: 60px;
+  height: 60px;}
+  .fact-num{
+  font-size: 1.2rem; }
+  .fact-name{
+  font-size: 1rem;}
+  .facts{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    li{
+      padding-top: 4rem;
+    }
+  }
+} 
+@media only screen and (min-width: 992px) {
+  .funfact{
+  margin-bottom: 10rem;
+}
+    .fact-icon{
+  width: 80px;
+  height: 80px;}
+  .fact-num{ 
+  font-size: 2rem; }
+  .fact-name{
+    line-height: 2rem;
+  font-size: 1.4rem;}
+  .facts{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    li{
+      padding-top: 6.7rem;
+    }
+  }
+  } 

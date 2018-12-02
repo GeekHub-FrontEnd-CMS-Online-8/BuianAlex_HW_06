@@ -2,9 +2,7 @@ footer{
   position: relative;
   max-width: 1366px;
   width: 100%;
-  padding: 0 100px ;
- 
-
+  padding: 0 20px;
   z-index: 1;
   margin: -85px auto 0 ;
   text-align: center;
@@ -56,7 +54,7 @@ footer{
 font-family: 'Montserrat', sans-serif;
 font-size: 16px;
 font-weight: 400;
-line-height: 67px;
+line-height: 3rem;
 letter-spacing: 0.96px;
 }
 .xxx{
@@ -78,8 +76,42 @@ letter-spacing: 0.96px;
   bottom: 195px;
   box-shadow: 0 0px 15px 1px rgba(0, 0, 0, 0.4);
   background-color: #ffffff;
+  color: #4d4d4d;
   &:hover{
     box-shadow: 0 0 5px 1px  #4d4d4d;
   }
 
 }
+
+
+@media only screen and (max-width: 992px) {
+    .footer-flex{
+      flex-direction: column;
+      align-items: center;
+    }
+    .socials{
+      margin-top:1rem ;
+      width: 100%;
+      text-align: center;
+    }
+    footer{
+    margin: -110px auto 0 ;}
+    #toUp{
+      width: 30px;
+      height: 30px;
+      right: 20px;}
+    .copyright{
+      width: 100%;
+    }  
+  }
+ @media only screen and (min-width: 992px) {
+    footer{
+        padding: 0 50px;
+    }
+  } 
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    footer{
+     padding: 0 100px;
+    }
+  } 

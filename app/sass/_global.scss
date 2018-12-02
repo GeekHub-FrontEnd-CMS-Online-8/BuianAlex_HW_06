@@ -1,16 +1,9 @@
 $bg-color:#f6f6f6;
 $second-bg-color: #fff;
 
-
-
-
-
-
 * {
-     box-sizing: border-box;
-  
-  }
- 
+     box-sizing: border-box; 
+  } 
   body{
     font-size: 16px;  
     font-family: 'Asap', sans-serif;
@@ -21,9 +14,7 @@ $second-bg-color: #fff;
     max-width: 1366px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 10px; 
-
-    /* Extra small devices (phones, 600px and down) */
+    padding: 0 20px; 
 }
   button{
     font-family: 'Asap', sans-serif;
@@ -42,10 +33,7 @@ $second-bg-color: #fff;
     transition: 0.3s;
     &:hover{
       box-shadow: 0 0 0 1px #4d4d4d;
-
     }   
-    
-
   }
   .btn-white{
     background-color: #ffffff;
@@ -62,7 +50,7 @@ $second-bg-color: #fff;
 h2{
   position: relative;
   opacity: 0.8;
-  font-size: 46px;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 49px;
   text-transform: uppercase;
@@ -78,16 +66,14 @@ h2{
     opacity: 0.6;
  }
  .section-header{
-   padding-top: 8.5rem;
+   padding-top: 4.5rem;
    text-align: center;
-   margin-bottom: 4rem;
+   margin-bottom: 2rem;
    h2::before{
      left: 50%;
      transform: translateX(-50%)
    }
-
  }
-
  .burger-wraper {
    display: block;
    position: relative;
@@ -102,6 +88,7 @@ h2{
   width: 22px;
   height: 3px;
   position: absolute;
+  z-index: 999;
   opacity: .7;
   background-color: #4d4d4d; }
 
@@ -111,43 +98,64 @@ h2{
   width: 22px;
   height: 3px;
   background-color: #4d4d4d;
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0;
   content: ' '; }
 
 .burger::before {
+  transition-property: top, transform;
   bottom: 8px; }
 
 .burger::after {
+  transition-property: bottom, transform;
   top: 8px; }
- @media only screen and (max-width: 600px) {
+
+.burger-active{
+  background: none;
+}
+.burger-active::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+.burger-active::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.burger-active::after, .burger-active::before{
+  transition-delay: 0, 0.3s;
+
+}
+
+ 
+ 
+ 
+ 
+  @media only screen and (max-width: 600px) {
    h2{
       font-size: 2.2rem;
-    }
-
- } 
-
+    }  
+  }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    .wraper{
-      padding: 0 10px;
-    }
     h2{
       font-size: 2.2rem;
     }
-    
+    .section-header{
+        padding-top: 6rem;
+        margin-bottom: 4rem;}
   } 
-
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    
+    h2{
+      font-size: 3rem;
+    }   
   } 
-
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     .wraper{
         padding: 0 50px;
-      }
+    }
   } 
-
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .wraper{

@@ -2,8 +2,8 @@
   @extend %space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 6.7rem ;
-  padding-bottom: 4rem;
+  padding-top: 4.5rem ;
+  padding-bottom:4rem;
   h2{
     max-width: 400px; 
     margin-bottom: 2rem;
@@ -21,49 +21,76 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    text-align: left;   
-  }
-  img{
-    @extend %col-6;
-    min-width: 320px;
-    height: auto;
-    padding-bottom: 2rem;
+    text-align: center;   
   }
   button{
     width: 245px;
     height: 50px;
   }
-  @media only screen and (max-width: 923px) {
+}
+.about-content-wraper{
+  max-width: 470px;
+}
+ .about-img{
+   width: 50%;
+    img{
+        width: 100%;
+        height: auto;   
+      }
+  }
+
+  @media only screen and (max-width: 679px) {
+    .about{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .about-content-wraper{
       width: 100%;
       margin: 0 auto;
+      padding-bottom: 2rem;
       text-align: center;
-    }
-    img{
-      width: 100%;
-    }
-    h2{
-      margin: 0 auto 1rem;
-    }
-    h2::before{
+      h2::before{
         left: 50%;
         transform: translateX(-50%);      
+      }
+      h2{
+      margin: 0 auto 1rem;
+    }
+
     }
     .about-content{
       width: 100%;
-    }
-    p{
+      p{
       text-align: center;
+      }
     }
-
-
+    .about-img{
+      width: 100%;
+    } 
   }
 
-
-}
-
-.about-content-wraper{
-  max-width: 470px;
-  padding-bottom: 2rem;
-  //@extend %col-6;
-}
+@media only screen and (min-width: 680px) {
+   .about{
+    padding-bottom: 4rem;
+      h2{
+        text-align: left;
+      }
+      p{
+        text-align: left;
+      }
+   }
+   .about-content-wraper{
+    width: 50%;
+    }
+    .about-img{
+      width: 50%;
+      height: 100%;
+    }
+  }
+ @media only screen and (min-width: 992px) {
+    .about{
+      padding-top: 6.7rem ;
+      padding-bottom: 8rem;
+   }
+  }   

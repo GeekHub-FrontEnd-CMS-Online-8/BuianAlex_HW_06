@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>HW_6</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./img/site_icon.png">
   <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -14,11 +15,13 @@
 </head>
 
 <body>
-  <header class="wraper main-header">
+  <header class="wraper main-header" id="home">
     <a href="/"><img src="./img/Logo.png" width="81" alt="luis oenrique logo" class="logo"/></a>
-    <nav class="main-nav">
+    <div class="burger-wraper" id='burger'><span class="burger"></span></div>
+
+    <nav class="main-nav" id='main-nav'>
       <ul>
-        <li><a href ='#' class='active'>Home</a></li>
+        <li><a href ='#home' class='active'>Home</a></li>
         <li><a href ='#about'>ABOUT</a></li>
         <li><a href ='#services'>SERVICE</a></li>
         <li><a href ='#services'>PORTFOLIO</a></li>
@@ -29,7 +32,7 @@
 
   <section class="wraper hero">
 
-      <div class="content-wraper">
+
         <div class="hero-content">
           <h1>
             Luis Oenrique
@@ -39,14 +42,16 @@
           <button class="btn-transparent">hire me</button>
         </div>
         
-      </div>
-      <img src='./img/img_face.png' class="hero-img" width="570" height="670" alt='Luis Oenrique'/>
+      <div class="img-hero">
+        <img src='./img/img_face.png'  width="570" alt='Luis Oenrique'/>
+      </div> 
+      
 
       <a href="#about" class='btn-down'><i class="fas fa-angle-down fa-lg"></i></a>
    
   </section>
 
-  <section class="wraper about" id="about">
+   <section class="wraper about" id="about">
     <div class="about-content-wraper">
       <div class="about-content">
         <h2>
@@ -61,9 +66,10 @@
 
         <button class="btn-transparent">DOWNLOAD MY CV</button>
       </div>
-    
     </div>
-    <img src="./img/about.png" alt="" width="570"/>
+    <div class="about-img">
+      <img src="./img/about.png" alt="" width="570"/>
+    </div>
   </section>
 
   <section class="wraper services " id='services'>
@@ -72,38 +78,47 @@
     </header>
     <ul class="features-list">
       <li class="features-item">
-        <div class="features-icon"></div>
+        <div class="features-icon">
+
+        </div>
         <h3>User Research</h3>
       </li>
       <li class="features-item">
-        <div class="features-icon"></div>
+        <div class="features-icon">
+
+        </div>
         <h3>IA And Wireframes</h3>
       </li>
       <li class="features-item">
-        <div class="features-icon"></div>
+        <div class="features-icon">
+
+        </div>
         <h3>User Testing</h3>
       </li>
       <li class="features-item">
-        <div class="features-icon"></div>
+        <div class="features-icon">
+        </div>
         <h3>Looks and Feel
         Design (UI)</h3>
       </li>
       <li class="features-item">
-        <div class="features-icon"></div>
+        <div class="features-icon">
+        </div>
         <h3>Delivery</h3>
       </li>
       <li class="features-item">
-        <div class="features-icon"></div>
+        <div class="features-icon">
+        </div>
         <h3>Integration Support</h3>
       </li>
     </ul>
   </section>
   
-  <section class="skills">
+  <section class="wraper skills">
     <header class="section-header">
       <h2>MY SKILLS</h2>
     </header>
-    <img src="./img/skill_board.png" alt="Luis Oenrique skill"/>
+    <img src="./img/skill_board.png" alt="Luis Oenrique skill" width="819"/>
   </section>
   
   <section class="wraper portfolio" id='portfolio'>
@@ -121,7 +136,7 @@
     </ul>
     <button class="btn-white">load more</button>
   </section>
-  
+
   <section class="wraper testimonials">
     <header class="section-header">
       <h2>TESTIMONIALS</h2>
@@ -129,8 +144,10 @@
     <div class="slider">
       <ul class='testimonial-list'>
         <li class="slide  fade">
-          <div class = "testimonial-wraper">
+          <div class = "flex-wraper"> 
+          <div class="testimonial-photo">
             <img src="./img/photo_limara_tusi.png" width="159"  alt="limara_tusi" />
+          </div>  
           <div class='testimonial'>
             <h4>Limara tusi</h4>
             <p class="position">CEO, RanDOM COMPANY</p>
@@ -142,11 +159,13 @@
           </div>
         </li>
         <li class="slide  fade">
-          <div class="testimonial-wraper">
-            <img src="./img/photo_limara_tusi.png" width="159"  alt="limara_tusi" />
+          <div class="flex-wraper">
+            <div class="testimonial-photo">
+              <img src="./img/Alf.jpg" width="159" alt="limara_tusi" />
+            </div>
             <div class='testimonial'>
-              <h4>Limara tusi-90</h4>
-              <p class="position">CEO, RanDOM COMPANY</p>
+              <h4>ALF</h4>
+              <p class="position">Alien Life Form</p>
               <p class="testimonial-text">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
                 sociis
@@ -156,11 +175,13 @@
           </div>
         </li>
         <li class="slide  fade">
-          <div class="testimonial-wraper">
-            <img src="./img/photo_limara_tusi.png" width="159"  alt="limara_tusi" />
+          <div class="flex-wraper">
+            <div class="testimonial-photo">
+              <img src="./img/mister.jpg" width="159" alt="limara_tusi" />
+            </div>
             <div class='testimonial'>
-              <h4>Limara tusi-180</h4>
-              <p class="position">CEO, RanDOM COMPANY</p>
+              <h4>Mr. Robot</h4>
+              <p class="position">CEO, fsociety</p>
               <p class="testimonial-text">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
                 sociis
@@ -169,6 +190,7 @@
             </div>
           </div>
         </li>
+        
       </ul>
       <div class="slider-dots">
         <span class="dot"></span>
@@ -181,24 +203,24 @@
   <div class="wraper funfact">
     <ul class="facts">
       <li>
-        <div class="icon-center-wraper"><span class="fact-icon"></span></div>
+        <div class="fact-icon"></div>
         <p class="fact-num">120</p>
         <p class="fact-name">Hands to Work</p>
       </li>
       <li>
-        <div class="icon-center-wraper"><span class="fact-icon"></span></div>
+        <div class="fact-icon"></div>
         <p class="fact-num">120</p>
-        <p  class="fact-name">Hands to Work</p>
+        <p  class="fact-name">Happy Client</p>
       </li>
       <li>
-        <div class="icon-center-wraper"><span class="fact-icon"></span></div>
+        <div class="fact-icon"></div>
         <p class="fact-num">120</p>
-        <p  class="fact-name">Hands to Work</p>
+        <p  class="fact-name">Finished Project</p>
       </li>
       <li>
-        <div class="icon-center-wraper"><span class="fact-icon"></span></div>
+        <div class="fact-icon"></div>
         <p class="fact-num">120</p>
-        <p class="fact-name">Hands to Work</p>
+        <p class="fact-name">Cups of Coffe</p>
       </li>
     </ul>
   </div>
@@ -217,7 +239,8 @@
       <button type="submit">send</button>
     </form>
   </section>
-  <footer >
+  
+  <footer  >
     <hr>
     <div class='footer-flex' >
       <div class="socials">
@@ -230,13 +253,9 @@
       </div>
       <div class="copyright ">2017. All Right Reserved</div>
       <div class="xxx"> <button  id='toUp'><i class="fas fa-angle-up fa-lg"></i></button></div>
-    </div>
-    
-    
-  </footer>
-
-
-  
+    </div>  
+  </footer>  
+ 
   <script src="./js/main.js"></script>   
 </body>
 </html>
